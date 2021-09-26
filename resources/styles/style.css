@@ -1,0 +1,124 @@
+/* Color variables */
+:root {
+  /* Text */
+  --very-dark-desaturated-blue: hsl(238, 29%, 16%);
+  --soft-red: hsl(14, 88%, 65%);
+  --very-dark-grayish-blue: hsl(237, 12%, 33%);
+  --dark-grayish-blue: hsl(240, 6%, 50%);
+  /* Gradient */
+  --soft-violet: hsl(273, 75%, 66%);
+  --soft-blue: hsl(240, 73%, 65%);
+  /* Dividers */
+  --light-grayish-blue: hsl(240, 5%, 91%);
+}
+/* Body */
+body {
+  background-color: var(--soft-violet);
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 120px;
+  padding-bottom: 30px;
+}
+/* Horizontal line */
+hr {
+ margin: 10px 0 20px 0;
+}
+/* Illustration */
+.illustrator{
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0px;
+}
+/* Wrapper */
+.wrapper {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 22px 22px 86px -17px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 22px 22px 86px -17px rgba(0,0,0,0.75);
+  -moz-box-shadow: 22px 22px 86px -17px rgba(0,0,0,0.75);
+}
+/* Women Illustration */
+.women-illustration {
+  position: absolute;
+  top: -111px;
+  left: 5px;
+}
+/* Shadow */
+.shadow {
+  position: absolute;
+  left: 31px;
+}
+/* FAQ */
+.faq {
+  font-size: 1.7em;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+/* Question */
+.questions {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+}
+.question {
+  padding: 5px;
+  width: 90%; 
+  position: relative;
+  margin-left: 10px;
+}
+.ask {
+  height: 30px;
+}
+.ask:hover {
+  cursor: pointer;
+  color: var(--soft-red);
+}
+/* Arrow sign */
+.arrow {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}
+/* Answer */
+.answer {
+  margin-top: 10px;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+/* Attribution */
+/* .attribution { 
+  font-size: 11px; 
+  text-align: center; 
+}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+} */

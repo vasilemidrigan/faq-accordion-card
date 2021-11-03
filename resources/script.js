@@ -1,7 +1,7 @@
 // Strict mode
 "use strict";
 // showHide() function
-// (showing and hidding our answers while clicking on the questions)
+// (showing and hidding answers while clicking on the questions)
 const showHide = (answerID, arrowID, askID) => {
   const element = document.getElementById(answerID);
   const arrow = document.getElementById(arrowID);

@@ -1,5 +1,8 @@
 // Strict mode
 "use strict";
+// Variables
+const wrapper = document.querySelector(".wrapper");
+
 // showHide() function
 // (showing and hidding answers while clicking on the questions)
 const showHide = (answerID, arrowID, askID) => {

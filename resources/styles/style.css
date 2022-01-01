@@ -11,14 +11,19 @@
   /* Dividers */
   --light-grayish-blue: hsl(240, 5%, 91%);
 }
+/* ---------------------------------------------------------------------- */
+/* ------------------------- General Styles ----------------------------- */
+/* ---------------------------------------------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* Body */
 body {
   background-color: var(--soft-violet);
   font-family: "Kumbh Sans", sans-serif;
   font-size: 13px;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
   min-width: 330px;
   display: flex;
   justify-content: center;
@@ -30,63 +35,53 @@ body {
 hr {
   margin: 10px 0 20px 0;
 }
-/* Illustration */
-.illustrator {
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0px;
-}
+/* ---------------------------------------------------------------------- */
+/* ------------------------- Specific Styles (mobile version) ----------- */
+/* ---------------------------------------------------------------------- */
 /* Wrapper */
 .wrapper {
-  background-color: #fff;
-  border-radius: 20px;
-  width: 300px;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  position: relative;
+  min-width: 300px;
+  max-width: 300px;
+  background-color: #fff;
+  border-radius: 20px;
   box-shadow: 22px 22px 86px -17px rgba(0, 0, 0, 0.75);
   -webkit-box-shadow: 22px 22px 86px -17px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 22px 22px 86px -17px rgba(0, 0, 0, 0.75);
 }
-/* Women Illustration */
-.women-illustration {
+/* Illustration */
+.illustrator {
   position: absolute;
-  top: -111px;
-  left: 5px;
+  top: -110px;
+  left: -2px;
 }
 /* Shadow */
 .shadow {
   position: absolute;
-  left: 31px;
+  top: 102px;
+  left: 27px;
 }
 /* FAQ */
 .faq {
   font-size: 1.7em;
   height: 80px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   margin-top: 100px;
 }
 /* Question */
 .questions {
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
   width: 100%;
-  height: 100%;
   border-radius: 20px;
 }
 .question {
-  padding: 5px;
-  width: 90%;
   position: relative;
   margin-left: 10px;
+  padding: 5px;
+  max-width: 90%;
 }
 .ask {
   height: 30px;
@@ -105,4 +100,57 @@ hr {
 .answer {
   margin-top: 10px;
   display: none;
+}
+/* ---------------------------------------------------------------------- */
+/* ------------------------- Desktop Version ---------------------------- */
+/* ---------------------------------------------------------------------- */
+@media (min-width: 1000px) {
+  /* Body */
+  body {
+    padding-top: 30px;
+  }
+  /* Bypass Overflow */
+  .bypass-overflow {
+    position: relative;
+  }
+  /* Box image */
+  .box {
+    z-index: 1;
+    position: absolute;
+    top: 200px;
+    left: -92px;
+  }
+  /* Main Wrapper */
+  .wrapper {
+    overflow: hidden;
+    flex-direction: unset;
+    justify-content: flex-end;
+    align-items: unset;
+    min-width: 925px;
+    max-width: 925px;
+    min-height: 510px;
+  }
+  /* Illustrator */
+  .illustrator {
+    top: 85px;
+    left: -75px;
+  }
+  .shadow {
+    width: 1000px;
+    position: absolute;
+    top: -380px;
+    left: -525px;
+  }
+  /* Questions */
+  .questions {
+    min-width: 450px;
+    max-width: 450px;
+    border-radius: 20px;
+    align-self: flex-end;
+  }
+  /* FAQ header */
+  .faq {
+    text-align: unset;
+    margin-left: 12px;
+  }
 }

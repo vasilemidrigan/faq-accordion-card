@@ -18,132 +18,155 @@
       href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <script src="resources/script.js" defer></script>
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="illustrator">
-        <div class="women-illustration">
-          <img
-            id="image"
-            src="images/illustration-woman-online-mobile.png"
-            alt="women-illustration"
-          />
-        </div>
-        <div class="shadow">
-          <img src="images/bg-pattern-mobile.png" alt="illustration-shadow" />
-        </div>
-      </div>
-      <div class="questions">
-        <div class="faq">
-          <h1>FAQ</h1>
-        </div>
-        <div id="first-question" class="question">
-          <div
-            id="first-ask"
-            class="ask"
-            onclick="showHide('first-answer', 'first-arrow', 'first-ask')"
-          >
-            How many team members can I invite?
+    <!-- Bypass overflow: hidden property of the main wrapper -->
+    <div class="bypass-overflow">
+      <!-- Box image (overflowing the main wrapper) -->
+      <picture>
+        <source
+          media="(min-width: 1000px)"
+          srcset="images/illustration-box-desktop.png"
+        />
+        <img class="box" />
+      </picture>
+      <!-- Main Wrapper -->
+      <div class="wrapper">
+        <!-- Woman Illustrator -->
+        <div class="illustrator">
+          <picture>
+            <source
+              media="(min-width: 1000px)"
+              srcset="images/illustration-woman-online-desktop.png"
+            />
             <img
-              id="first-arrow"
+              id="image"
+              class="woman-illustration"
+              src="images/illustration-woman-online-mobile.png"
+              alt="Woman illustration"
+            />
+          </picture>
+          <!-- Shadow Image -->
+          <picture>
+            <source
+              class="shadow-desk"
+              media="(min-width: 1000px)"
+              srcset="images/bg-pattern-desktop.png"
+            />
+            <img
+              src="images/bg-pattern-mobile.png"
+              class="shadow"
+              alt="illustration-shadow"
+            />
+          </picture>
+        </div>
+        <div class="questions">
+          <div class="faq">
+            <h1>FAQ</h1>
+          </div>
+          <div id="first-question" class="question">
+            <div
+              id="first-ask"
+              class="ask"
+              onclick="showHide('first-answer', 'first-arrow', 'first-ask')"
+            >
+              How many team members can I invite?
+              <img
+                id="first-arrow"
+                class="arrow"
+                src="images/icon-arrow-down.png"
+                alt="arrow down"
+              />
+            </div>
+            <div id="first-answer" class="answer">
+              You can invite up to 2 additional users on the Free plan. There is
+              no limit on team members for the Premium plan.
+            </div>
+            <hr />
+          </div>
+          <div class="question">
+            <div
+              id="second-ask"
+              class="ask"
+              onclick="showHide('second-answer', 'second-arrow', 'second-ask')"
+            >
+              What is the maximum file upload size?
+              <img
+                id="second-arrow"
+                class="arrow"
+                src="images/icon-arrow-down.png"
+                alt="arrow down"
+              />
+            </div>
+            <div id="second-answer" class="answer">
+              No more than 2GB. All files in your account must fit your allotted
+              storage space.
+            </div>
+            <hr />
+          </div>
+          <div class="question">
+            <div
+              id="third-ask"
+              class="ask"
+              onclick="showHide('third-answer', 'third-arrow', 'third-ask')"
+            >
+              How do I reset my password?
+              <img
+                id="third-arrow"
+                class="arrow"
+                src="images/icon-arrow-down.png"
+                alt="arrow down"
+              />
+            </div>
+            <div id="third-answer" class="answer">
+              Click “Forgot password” from the login page or “Change password”
+              from your profile page. A reset link will be emailed to you.
+            </div>
+            <hr />
+          </div>
+          <div class="question">
+            <div
+              id="fourth-ask"
+              class="ask"
+              onclick="showHide('fourth-answer', 'fourth-arrow', 'fourth-ask')"
+            >
+              Can I cancel my subscription?
+              <img
+                id="fourth-arrow"
+                class="arrow"
+                src="images/icon-arrow-down.png"
+                alt="arrow down"
+              />
+            </div>
+            <div id="fourth-answer" class="answer">
+              Yes! Send us a message and we'll process your request no questions
+              asked.
+            </div>
+            <hr />
+          </div>
+          <div
+            class="question"
+            onclick="showHide('fifth-answer', 'fifth-arrow', 'fifth-ask')"
+          >
+            <div class="ask" id="fifth-ask">
+              Do you provide additional support?
+            </div>
+            <img
+              id="fifth-arrow"
               class="arrow"
               src="images/icon-arrow-down.png"
               alt="arrow down"
             />
+            <div id="fifth-answer" class="answer">
+              Chat and email support is available 24/7. Phone lines are open
+              during normal business hours.
+            </div>
+            <hr />
           </div>
-          <div id="first-answer" class="answer">
-            You can invite up to 2 additional users on the Free plan. There is
-            no limit on team members for the Premium plan.
-          </div>
-          <hr />
-        </div>
-        <div class="question">
-          <div
-            id="second-ask"
-            class="ask"
-            onclick="showHide('second-answer', 'second-arrow', 'second-ask')"
-          >
-            What is the maximum file upload size?
-            <img
-              id="second-arrow"
-              class="arrow"
-              src="images/icon-arrow-down.png"
-              alt="arrow down"
-            />
-          </div>
-          <div id="second-answer" class="answer">
-            No more than 2GB. All files in your account must fit your allotted
-            storage space.
-          </div>
-          <hr />
-        </div>
-        <div class="question">
-          <div
-            id="third-ask"
-            class="ask"
-            onclick="showHide('third-answer', 'third-arrow', 'third-ask')"
-          >
-            How do I reset my password?
-            <img
-              id="third-arrow"
-              class="arrow"
-              src="images/icon-arrow-down.png"
-              alt="arrow down"
-            />
-          </div>
-          <div id="third-answer" class="answer">
-            Click “Forgot password” from the login page or “Change password”
-            from your profile page. A reset link will be emailed to you.
-          </div>
-          <hr />
-        </div>
-        <div class="question">
-          <div
-            id="fourth-ask"
-            class="ask"
-            onclick="showHide('fourth-answer', 'fourth-arrow', 'fourth-ask')"
-          >
-            Can I cancel my subscription?
-            <img
-              id="fourth-arrow"
-              class="arrow"
-              src="images/icon-arrow-down.png"
-              alt="arrow down"
-            />
-          </div>
-          <div id="fourth-answer" class="answer">
-            Yes! Send us a message and we’ll process your request no questions
-            asked.
-          </div>
-          <hr />
-        </div>
-        <div
-          class="question"
-          onclick="showHide('fifth-answer', 'fifth-arrow', 'fifth-ask')"
-        >
-          <div class="ask" id="fifth-ask">
-            Do you provide additional support?
-          </div>
-          <img
-            id="fifth-arrow"
-            class="arrow"
-            src="images/icon-arrow-down.png"
-            alt="arrow down"
-          />
-          <div id="fifth-answer" class="answer">
-            Chat and email support is available 24/7. Phone lines are open
-            during normal business hours.
-          </div>
-          <hr />
         </div>
       </div>
     </div>
-    <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
-
-    <script src="resources/script.js"></script>
   </body>
 </html>
